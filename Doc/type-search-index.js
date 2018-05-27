@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.hellofresh.challenge","l":"api_test"}]

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-05-26T21:00:38Z" name="hf-test-suite" finished-at="2018-05-26T21:00:47Z" duration-ms="9188">
+    <groups>
+    </groups>
+    <test started-at="2018-05-26T21:00:38Z" name="test_chrome" finished-at="2018-05-26T21:00:47Z" duration-ms="9188">
+      <class name="com.hellofresh.challenge.api_test">
+        <test-method is-config="true" signature="initSetup(java.lang.String)[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:38Z" name="initSetup" finished-at="2018-05-27T02:30:39Z" duration-ms="1277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://services.groupkt.com/country/get/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSetup -->
+        <test-method signature="getAllNations()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:39Z" name="getAllNations" finished-at="2018-05-27T02:30:43Z" duration-ms="3784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllNations -->
+        <test-method signature="getResponseForIncorrectCode()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:43Z" name="getResponseForIncorrectCode" finished-at="2018-05-27T02:30:43Z" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResponseForIncorrectCode -->
+        <test-method signature="getResponseForInexistentNation()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:43Z" name="getResponseForInexistentNation" finished-at="2018-05-27T02:30:44Z" duration-ms="784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResponseForInexistentNation -->
+        <test-method signature="getResponseForPostValue()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:44Z" name="getResponseForPostValue" finished-at="2018-05-27T02:30:45Z" duration-ms="574" status="FAIL">
+          <exception class="com.jayway.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.jayway.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at com.jayway.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:915)
+	at com.jayway.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:880)
+	at com.jayway.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:959)
+	at com.jayway.restassured.path.json.JsonPath.get(JsonPath.java:201)
+	at com.jayway.restassured.path.json.JsonPath.getString(JsonPath.java:351)
+	at com.hellofresh.challenge.api_test.getResponseForPostValue(api_test.java:163)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
+	at groovy.json.JsonLexer.nextToken(JsonLexer.java:82)
+	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
+	at com.jayway.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:99)
+	at com.jayway.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:85)
+	at com.jayway.restassured.path.json.JsonPath$4$1.method(JsonPath.java:878)
+	at com.jayway.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:913)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.jayway.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResponseForPostValue -->
+        <test-method signature="getSpecificNationDE()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:45Z" name="getSpecificNationDE" finished-at="2018-05-27T02:30:45Z" duration-ms="635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSpecificNationDE -->
+        <test-method signature="getSpecificNationGB()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:45Z" name="getSpecificNationGB" finished-at="2018-05-27T02:30:46Z" duration-ms="794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSpecificNationGB -->
+        <test-method signature="getSpecificNationUS()[pri:0, instance:com.hellofresh.challenge.api_test@67a20f67]" started-at="2018-05-27T02:30:46Z" name="getSpecificNationUS" finished-at="2018-05-27T02:30:47Z" duration-ms="604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSpecificNationUS -->
+      </class> <!-- com.hellofresh.challenge.api_test -->
+    </test> <!-- test_chrome -->
+  </suite> <!-- hf-test-suite -->
+</testng-results>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [hf-test-suite]" guice-stage="DEVELOPMENT">
+  <parameter name="uri" value="http://services.groupkt.com/country/get/"/>
+  <test name="test_chrome(failed)">
+    <classes>
+      <class name="com.hellofresh.challenge.api_test">
+        <methods>
+          <include name="getResponseForPostValue"/>
+          <include name="initSetup"/>
+        </methods>
+      </class> <!-- com.hellofresh.challenge.api_test -->
+    </classes>
+  </test> <!-- test_chrome(failed) -->
+</suite> <!-- Failed suite [hf-test-suite] -->
